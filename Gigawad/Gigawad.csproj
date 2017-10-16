@@ -66,7 +66,16 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="wwwroot\main.html" />
+    <Content Include="wwwroot\repo.html" />
+    <Content Include="wwwroot\Scripts\app.js" />
+    <Content Include="wwwroot\Scripts\github.js" />
+    <Content Include="wwwroot\Scripts\RepoController.js" />
+    <Content Include="wwwroot\Scripts\UserController.js" />
+    <Content Include="wwwroot\user.html" />
     <None Include="packages.config" />
+    <Content Include="wwwroot\images\MV.JPG" />
+    <Content Include="wwwroot\Scripts\MainController.js" />
     <Content Include="wwwroot\Scripts\version.json" />
     <Content Include="wwwroot\Scripts\errors.json" />
     <Content Include="wwwroot\Scripts\angular.min.js.map" />
