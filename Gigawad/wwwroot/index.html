@@ -1,7 +1,11 @@
 ﻿<!DOCTYPE html>
-<html ng-app>
+<html ng-app="app">
 <head>
-    <script src="Scripts/lib//angular/angular.js"></script>
+    <script src="Scripts/lib/angular/angular.js"></script>
+    <script src="Scripts/lib/angular/angular-route.js"></script>
+    <script src="Scripts/lib/angular/app.js"></script>
+    <script src="Scripts/mainController.js"></script>
+    <script src="Scripts/LambdaStaticData.js"></script>
     <meta charset="utf-8" />
     <meta http-equiv="cache-control" content="max-age=0" />
     <meta http-equiv="cache-control" content="no-cache" />
@@ -15,7 +19,7 @@
 
     <title></title>
 </head>
-<body>
+<body ng-view>
     <header class="container-fluid">
         <h3>Gigawad</h3>
     </header>
@@ -36,12 +40,31 @@
                             It's currently using AngularJS and Bootstrap and is hosted on Amazon Web Services in an S3 bucket.  My plan is to play around with creating services using C# running on AWS Lambda. I will be adding items to this page as I create them.  My goal is to have a feature-rich website that is 100% serverless (and never use tools like Wix or WordPress).
                         </p>
                         <p class="col-sm-10">
-                            Last updated 10/23/2017
+                            The code for this site (and Lambda functions) can be found here: <a target="_blank" href="https://github.com/Michael-Vetter">https://github.com/Michael-Vetter</a>
+                        </p>
+                        <p class="col-sm-10">
+                            Last updated 10/25/2017
                         </p>
                     </div>
                 </article>
 
-
+                <article>
+                    <p>
+                        My first task is to call a Lambda function written in C# that returns static data via JSON.
+                    </p>
+                    <p>
+                        The JSON returned looks like this:  
+                    </p>
+                    <p>
+                        {"name":"Gigawad from Lambda","message":"Hooray for Lambda!"}
+                    </p>
+                    <p>
+                        Here is the name property from the actual Lambda call: {{lambdaStaticData.name}}
+                    </p>
+                    <p>
+                        And here is the name message property: {{lambdaStaticData.message}}
+                    </p>
+                    </article>
             </section>
             
             <aside class="col-sm-2 col-sm-pull-8">
