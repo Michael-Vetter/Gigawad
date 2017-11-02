@@ -11,6 +11,9 @@ header, footer {
     text-align: center;
 }
 
+textarea {
+    width: 100%;
+}
 
 aside {
     text-align: center;
@@ -75,13 +78,17 @@ article {
     padding: 40px;
 }
 
-    article img {
-        width: 100%;
-        height: 100%;
-        text-align: center;
-        box-shadow: 6px 6px 8px #777;
-        margin-bottom: 20px;
-    }
+.blogSection {
+    background-color: lightblue;
+}
+
+article img {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    box-shadow: 6px 6px 8px #777;
+    margin-bottom: 20px;
+}
 
     article p {
         font-size: 16px;
