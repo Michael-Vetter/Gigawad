@@ -1,10 +1,9 @@
 ﻿body {
     font-family: 'Open Sans', sans-serif;
 
-
 }
 
-header, footer {
+footer {
     background-color: #333;
     color: #ddd;
     padding: 20px;
@@ -93,3 +92,14 @@ article img {
     article p {
         font-size: 16px;
     }
+
+.myHeader {
+    background-image: url('../images/Gigwad.png');
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.myBody {
+    margin-top: 320px;
+}

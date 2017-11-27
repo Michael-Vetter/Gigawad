@@ -23,10 +23,12 @@
 </head>
 <body ng-view>
     <header class="container-fluid">
-        <h3>Gigawad</h3>
+        <div class="myHeader navbar navbar-inverse navbar-fixed-top">
+            <h3>Gigawad</h3>
+        </div>
     </header>
-    
-    <div class="container-fluid">
+
+    <div class="container-fluid myBody">
         <div class="row">
 
 
@@ -109,7 +111,9 @@
         </div>
     </div>
     <footer class="container-fluid">
-        <h1></h1>
-    </footer>
+        <div class="navbar navbar-inverse navbar-fixed-bottom">
+            some text
+        </div>
+</footer>
 </body>
 </html>
