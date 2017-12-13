@@ -1,6 +1,27 @@
 ﻿body {
     font-family: 'Open Sans', sans-serif;
+    padding-top: 80px;
+}
 
+.navbar {
+    margin-bottom: 0px;
+    padding: 30px 15px;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.navbar img {
+    width: 20%;
+    height: 20%;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #bbb;
+}
+
+.cbp-af-header-shrink {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    opacity: .8;
 }
 
 footer {
@@ -92,14 +113,3 @@ article img {
     article p {
         font-size: 16px;
     }
-
-.myHeader {
-    background-image: url('../images/Gigwad.png');
-    height: 300px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.myBody {
-    margin-top: 320px;
-}
