@@ -66,12 +66,12 @@
                             The code for this site (and Lambda functions) can be found here: <a target="_blank" href="https://github.com/Michael-Vetter">https://github.com/Michael-Vetter</a>
                         </p>
                         <p class="col-sm-10">
-                            Last updated 11/28/2017
+                            Last updated 12/13/2017
                         </p>
                     </div>
                 </article>
 
-                <article>
+                <article class="lambd1">
 
                     <p>
                         My first task is to call a Lambda function written in C# that returns static data via JSON.
@@ -90,17 +90,31 @@
                     </p>
                 </article>
 
-                <article>
-                    <h2>There's Gotta be a Penguin Up Here Somewhere</h2>
-                    <img src="images/snowboarder.jpg" />
+                <article class="lambd2">
+                    <h3>This calls a Lambda function to read and write entries to a DynamoDB (noSQL) database:</h3>
                     <div class="row">
-                        <p class="col-sm-10">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                        </p>
-                        <div class="col-sm-2">
-                            <input type="button" class="btn btn-primary" value="More..." />
+
+                        <div ng-hide="lambdaBlogEntriesData">Loading...</div>
+                        <div ng-show="lambdaBlogEntriesData">
+                            <div>
+                                <form name="formAddBlogEntry" ng-submit="addBlogEntry(blogEntry.name, blogEntry.content)">
+                                    <div class="form-group"><input type="text" required placeholder="Your name" ng-model="blogEntry.name" /></div>
+                                    <div class="form-group">
+                                        <textarea type="text" required placeholder="Tell me your thoughts" ng-model="blogEntry.content"></textarea>
+                                    </div>
+                                    <span>
+                                        <button type="submit" class="btn btn-primary">Add Blog Entry</button>
+                                    </span>
+
+                                </form>
+                                <ul>
+                                    <li ng-repeat="entry in lambdaBlogEntriesData | orderBy: '-CreatedTimestamp'">
+                                        <p>{{entry.Name}}, {{entry.CreatedTimestamp | date:'medium'}}</p>
+                                        <p>{{entry.Content}}</p>
+
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </article>
@@ -120,6 +134,7 @@
         <h1>FOOTER</h1>
     </footer>
 
+    <script src="Scripts/lib/jquery-1.9.1.min.js"></script>
     <script src="Scripts/lib/angular/angular.js"></script>
     <script src="Scripts/lib/angular/angular-route.js"></script>
     <script src="Scripts/lib/angular/app.js"></script>
@@ -127,7 +142,6 @@
     <script src="Scripts/LambdaStaticData.js"></script>
     <script src="Scripts/LambdaBlogEntries.js"></script>
     <script src="Scripts/LambdaAddBlogEntry.js"></script>
-    <script src="Scripts/lib/jquery-1.9.1.min.js"></script>
     <script src="Scripts/lib/bootstrap.min.js"></script>
     <script src="Scripts/lib/classie.js"></script>
     <script src="Scripts/lib/cbpAnimatedHeader.js"></script>
