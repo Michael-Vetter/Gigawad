@@ -72,6 +72,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="wwwroot\app.css" />
+    <Content Include="wwwroot\images\gigawadwebsiteversionfinal.jpg" />
     <Content Include="wwwroot\images\Gigwad.png" />
     <Content Include="wwwroot\images\GigwadLowMargin.png" />
     <Content Include="wwwroot\index - Copy.html" />
