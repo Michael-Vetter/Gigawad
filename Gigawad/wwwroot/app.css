@@ -1,6 +1,6 @@
 ﻿body {
     font-family: 'Open Sans', sans-serif;
-    padding-top: 100px;
+    padding-top: 200px;
 }
 
 .navbar {
@@ -13,8 +13,8 @@
     color: #bbb;
 }
 .navbar img {
-    width: 10%;
-    height: 10%;
+    width: 30%;
+    height: 30%;
 }
 
 .cbp-af-header-shrink {
