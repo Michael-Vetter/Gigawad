@@ -9,8 +9,9 @@
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
-.navbar-inverse .navbar-nav>li>a {
-    color: #bbb;
+.navbar-inverse {
+    background-color: #ebf2ee;
+    border-color: #ebf2ee;
 }
 .navbar img {
     width: 30%;
@@ -41,8 +42,11 @@ footer {
 aside {
     background-color: #f7f7f7;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 80px;
 }
+.leftbar img {
+        width: 50%;
+    }
 
 .range-list {
     padding-bottom: 40px;
