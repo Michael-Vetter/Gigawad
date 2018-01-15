@@ -111,6 +111,11 @@ article p {
 
 @media (max-width: 767px) {
 
+    .navbar img {
+        width: 60%;
+        height: 60%;
+    }
+
     .range-list h4 {
         display: inline;
         font-size: 18px;
